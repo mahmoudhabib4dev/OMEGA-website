@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/omegav1logo.png">
+    <link rel="stylesheet" href="../../css/teacher/sign-up.css">
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" type="module"></script>
+    <title>تسجيل المعلمين | Omega LMS</title>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <!-- Right Presentation & Informational Section -->
+        <main class="right-section">
+            <div class="lottie-container">
+                <dotlottie-wc src="../../assets/lottie/Doctor.json" speed="0.7" style="width: 380px; height: 380px;" loop
+                    autoplay>
+                </dotlottie-wc>
+            </div>
+
+            <article class="info-content">
+                <h1 class="headline">أهلاً بك يا دكتور في أوميجا<br><span class="highlight">معاً نشكّل مستقبل التعليم
+                        الطبي</span></h1>
+                <p class="description">انضم إلى شبكة نخبوية متميزة من الأطباء، الاستشاريين، والباحثين. تمنحك منصة أوميجا
+                    الأدوات الأكاديمية المتقدمة لتحويل خبراتك السريرية والعملية إلى مساقات تعليمية منظمة وعالية الأثر
+                </p>
+
+                <ul class="features-list">
+                    <li>صياغة وتقديم الرؤى السريرية عبر واجهة استخدام ذكية وسلسة.</li>
+                    <li>توسيع نطاق تأثيرك المعرفي من القاعات التقليدية إلى فضاءات عالمية.</li>
+                    <li>إدارة مهامك التدريسية بمرونة كاملة جنباً إلى جنب مع ممارستك الطبية.</li>
+                </ul>
+
+                <div class="badge-verify">
+                    <span class="icon">🔐</span> نظام تحقق آمن وخاص للمؤهلات الطبية
+                </div>
+            </article>
+        </main>
+
+        <!-- Left Interactive Sign-Up Form Card Section -->
+        <section class="left-section">
+            <header class="form-header">
+                <h2>إنشاء حساب محاضر جديد</h2>
+                <p>يرجى إدخال بياناتك الأكاديمية لبدء إعداد الملف الشخصي</p>
+            </header>
+
+            <form action="#" method="POST" enctype="multipart/form-data" class="signup-form">
+                <div class="input-group">
+                    <input type="text" id="fullName" name="fullName"
+                        placeholder="الاسم الكامل المسبوق باللقب العلمي (مثال: د. أحمد)" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف الخاص بك">
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="البريد الإلكتروني المؤسسي أو الطبي"
+                        required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="كلمة السر" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmpassword" name="confirmpassword" placeholder="تأكيد كلمة السر"
+                        required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="specialty" name="specialty" placeholder="التخصص" required>
+                </div>
+                   <div class="input-group">
+                    <input type="text" id="license" name="license" placeholder="رقم الشهادة" required>
+                </div>
+                     <div class="input-group">
+                    <input type="text" id="yearsofexp" name="yearsofexp" placeholder="سنوات الخبرة" required>
+                </div>
+                     <div class="input-group">
+                    <input type="text" id="location" name="location" placeholder="الموقع الحالي" required>
+                </div>
+                    <div class="input-group image-upload-group">
+                        <label class="file-label" for="personalImage">الصورة الشخصية</label>
+                        <input class="profile-image-input" type="file" id="personalImage" name="personalImage"
+                            accept="image/png, image/jpeg, image/webp">
+                        <small class="file-hint">PNG أو JPG أو WEBP</small>
+                    </div>
+                <button type="submit" class="btn-submit">تأكيد التسجيل والانضمام للهيئة التدريسية</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
