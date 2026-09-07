@@ -67,10 +67,9 @@ body::before {
     flex: 1.1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: right;
+    align-items: center;
+    text-align: center;
     padding: 1rem;
-    transform: translateY(-105px);
 }
 
 .lottie-container {
@@ -82,6 +81,7 @@ body::before {
 
 .info-content {
     width: 100%;
+    text-align: center;
 }
 
 .headline {
@@ -116,6 +116,7 @@ body::before {
     margin-bottom: 16px;
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     color: #334155;
 }
 
@@ -142,11 +143,29 @@ body::before {
     margin-left: 8px;
 }
 
+.login-prompt {
+    margin: 20px 0 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.login-prompt a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-prompt a:hover,
+.login-prompt a:focus-visible {
+    text-decoration: underline;
+}
+
 /* Form block architecture */
 .left-section {
-    flex: 0.9;
+    flex: 1.1;
     background-color: #ffffff;
-    padding: 3.5rem 2.5rem;
+    padding: 2rem 2.5rem;
     border-radius: 20px;
     box-shadow: var(--card-shadow);
     border: 1px solid rgba(226, 232, 240, 0.8);
@@ -154,7 +173,7 @@ body::before {
 
 .form-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .form-header h2 {
@@ -171,9 +190,14 @@ body::before {
 
 .signup-form {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.signup-form .image-upload-group,
+.signup-form .btn-submit {
+    grid-column: 1 / -1;
 }
 
 .input-group {
@@ -225,7 +249,7 @@ input[type=tel],
 input[type=email],
 input[type=password] {
     width: 100%;
-    padding: 16px;
+    padding: 12px 16px;
     border: 1px solid var(--input-border);
     border-radius: 10px;
     font-size: 1rem;
@@ -245,8 +269,8 @@ input:focus {
 /* Primary submission handling element */
 .btn-submit {
     width: 100%;
-    margin-top: 12px;
-    padding: 16px;
+    margin-top: 4px;
+    padding: 12px 16px;
     background-color: var(--primary-color);
     color: #ffffff;
     border: none;
@@ -290,5 +314,11 @@ input:focus {
 
     .features-list li {
         justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .signup-form {
+        grid-template-columns: 1fr;
     }
 }
