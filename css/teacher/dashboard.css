@@ -9,20 +9,63 @@ body {
     width: 100%;
 }
 
+body {
+    display: grid;
+    grid-template-columns: 12% 88%;
+    grid-template-rows: 10% 90%;
+}
+
 :root {
     --primary-color: #0968aa;
     --primary-hover: #0968aa;
 }
 
 .topnav {
+    position: relative;
     overflow: hidden;
-    height: 10%;
-    width: 88%;
-    float: left;
+    grid-column: 2;
+    grid-row: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+}
+
+.search-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    direction: rtl;
+    gap: 8px;
+    width: min(45%, 420px);
+    height: 38px;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.search-form button {
+    padding: 0 16px;
+    border: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+}
+
+.search-form button:hover {
+    background-color: #075487;
 }
 
 .alert-bell {
@@ -37,15 +80,34 @@ body {
     margin-left: 16px;
 }
 
+.sidebar-icon {
+    width: 32px;
+    height: 32px;
+}
 
 .sidebar {
     background-color: var(--primary-color);
     overflow: hidden;
-    min-height: 100%;
-    width: 12%;
-    float: right;
+    grid-column: 1;
+    grid-row: 1 / 3;
     text-align: center;
+}
 
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 12px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dashboard-content {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 32px;
+    overflow: auto;
 }
 
 

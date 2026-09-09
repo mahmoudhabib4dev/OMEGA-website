@@ -12,6 +12,12 @@
 
 <body>
     <div class="topnav">
+        <form class="search-form" action="#" method="get">
+               <button type="submit">بحث</button>
+            <input type="search" name="search" placeholder="ابحث هنا" aria-label="بحث">
+         
+        </form>
+
         <dotlottie-wc class="alert-bell" src="../../assets/lottie/alert.json" speed="0.7" loop autoplay>
         </dotlottie-wc>
 
@@ -29,12 +35,25 @@
         <br />
         <p style="color: white;">OMEGA LMS</p>
         <br /><br /><br />
-        <p style="color: white;">الرئيسية</p>
-        <br /><br />
-        <p style="color: white;">إدارة الفيديوهات</p>
-        <br /><br />
-        <p style="color: white;">إدارة الكورسات</p>
+        <a class="sidebar-link" href="#">
+            <dotlottie-wc class="sidebar-icon" src="../../assets/lottie/home.json" speed="0.7" loop autoplay>
+            </dotlottie-wc>
+            <span>الرئيسية</span>
+        </a>
+        <a class="sidebar-link" href="#">
+            <dotlottie-wc class="sidebar-icon" src="../../assets/lottie/Pause Play.json" speed="0.7" loop autoplay>
+            </dotlottie-wc>
+            <span>إدارة الفيديوهات</span>
+        </a>
+        <a class="sidebar-link" href="#">
+            <dotlottie-wc class="sidebar-icon" src="../../assets/lottie/home.json" speed="0.7" loop autoplay>
+            </dotlottie-wc>
+            <span>إدارة الكورسات</span>
+        </a>
     </div>
+    <main class="dashboard-content">
+        
+    </main>
 </body>
 
 </html>
