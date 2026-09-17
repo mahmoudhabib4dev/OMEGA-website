@@ -51,3 +51,24 @@ function showSlide(index) {
 function scheduleCarousel() {
     carouselTimer = window.setTimeout(carousel, 5000);
 }
+
+var revealItems = document.querySelectorAll(".scroll-reveal:not(.is-visible)");
+
+if ("IntersectionObserver" in window) {
+    var revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    revealItems.forEach(function (item) {
+        revealObserver.observe(item);
+    });
+} else {
+    revealItems.forEach(function (item) {
+        item.classList.add("is-visible");
+    });
+}
